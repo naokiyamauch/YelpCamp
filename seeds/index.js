@@ -19,10 +19,13 @@ const seedDB = async () => {
     await Campground.deleteMany({});
     for (let i = 0; i < 50; i++) {
         const randomCityIndex = Math.floor(Math.random() * cities.length);
+        const price = Math.floor(Math.random() * 200) + 100;
         const camp = new Campground({
             location: `${cities[randomCityIndex].city}, ${cities[randomCityIndex].state}`,
-            title: `${sample(descriptors)} ${sample(places)
-                }`
+            title: `${sample(descriptors)} ${sample(places)}`,
+            image: `https://picsum.photos/400?random=${Math.random()}`,
+            description: 'Nestled in the heart of the Blue Ridge Mountains, Whispering Pines Campground offers a peaceful retreat surrounded by towering pines and babbling brooks. Whether you are a tent camper, RV enthusiast, or looking for a cozy cabin, our campground provides the perfect base for outdoor adventures and family fun.',
+            price
         });
         await camp.save();
     }
