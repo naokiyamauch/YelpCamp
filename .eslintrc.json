@@ -1,0 +1,42 @@
+{
+	// Use ESLint's recommended rules and add support for React, TypeScript, and Prettier
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		"react",
+		"@typescript-eslint"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		// Use modern ECMAScript features
+		"ecmaVersion": 2020,
+		// Enable ES modules
+		"sourceType": "module",
+		// Enable JSX parsing for React
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		// Use single quotes for consistency with Prettier
+		"quotes": [
+			"error",
+			"single"
+		],
+		// Require semicolons
+		"semi": [
+			"error",
+			"always"
+		]
+	},
+	"settings": {
+		// Automatically detect the React version
+		"react": {
+			"version": "detect"
+		}
+	}
+}

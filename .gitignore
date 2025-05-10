@@ -1,1 +1,21 @@
+# Node
+node_modules/
+dist/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+.mypy_cache/
+
+# VS Code
+.vscode/
+.history/
+
+# OS
 .DS_Store
+Thumbs.db
