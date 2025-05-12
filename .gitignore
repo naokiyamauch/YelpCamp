@@ -1,21 +1,67 @@
-# Node
-node_modules/
-dist/
-.env
+# ==========================
+# Node.js / Next.js Projects
+# ==========================
 
-# Python
+# Dependency directory
+node_modules/
+
+# Build output
+dist/
+.next/
+out/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# ==========================
+# TypeScript
+# ==========================
+
+# TypeScript cache
+*.tsbuildinfo
+
+# ==========================
+# Log files
+# ==========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+.history/
+
+# ==========================
+# macOS / Windows system files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Python (if needed)
+# ==========================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
 .venv/
 .mypy_cache/
 
-# VS Code
-.vscode/
-.history/
+# ==========================
+# Sentry
+# ==========================
+.env.sentry-build-plugin
 
-# OS
-.DS_Store
-Thumbs.db
+# ==========================
+# Others
+# ==========================
+
+# Optional: lock files (depending on the package manager, only keep one)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
