@@ -70,13 +70,13 @@ passport.deserializeUser(User.deserializeUser());
 app.use(flash());
 app.use(helmet());
 
-// const scriptSrcUrls = ['https://api.mapbox.com', 'https://cdn.jsdelivr.net'];
-// const styleSrcUrls = ['https://api.mapbox.com', 'https://cdn.jsdelivr.net'];
-// const connectSrcUrls = [
-// 	'https://api.mapbox.com',
-// 	'https://*.tiles.mapbox.com',
-// 	'https://events.mapbox.com',
-// ];
+const scriptSrcUrls = ['https://api.mapbox.com', 'https://cdn.jsdelivr.net'];
+const styleSrcUrls = ['https://api.mapbox.com', 'https://cdn.jsdelivr.net'];
+const connectSrcUrls = [
+	'https://api.mapbox.com',
+	'https://*.tiles.mapbox.com',
+	'https://events.mapbox.com',
+];
 const fontSrcUrls = [];
 const imgSrcUrls = [
 	`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/`,
